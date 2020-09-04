@@ -29,9 +29,9 @@ jobs:
       run: zip -r myapp.zip .
 
     - name: 'Deploy to Azure Web App'
-      uses: azure/webapps-deploy@v1
+      uses: azure/webapps-deploy@v2
       with:
         app-name: 'miyuki-test'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_7fcbe7d100db4a45b19f130ff96b17da }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_91a1f87d6d6043c49144b271afbffd30 }}
         package: './myapp.zip'
